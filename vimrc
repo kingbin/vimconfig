@@ -56,19 +56,15 @@
 "   gc - comment
 "   ^c^c - slime
 "
-"   From: trac.vim
-"               :TWOpen <WikiPage>    - Open the wiki View
-"               :TWSave "<Comment>"   - Saves the Active Wiki Page
-
-
-"call pathogen#infect()
-silent! call pathogen#infect("~/.vim/depot")
-
 
 " first the disabled features due to security concerns
 set modelines=0               " no modelines [http://www.guninski.com/vim1.html]
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
+
+call pathogen#infect()
+"call pathogen#runtime_append_all_bundles()
+silent! call pathogen#infect("~/.vim/depot")
 
 set nocompatible
 syntax on
@@ -84,13 +80,18 @@ set visualbell t_vb=          " Disable ALL bells
 " xterm title
 set title
 
+set viminfo^=!
+
+" alt+n or alt+p to navigate between entries in QuickFix
+map <silent> <m-p> :cp <cr>
+map <silent> <m-n> :cn <cr>
+
 " Local configuration
 " set runtimepath=~/.vim,/etc/vim,/usr/share/vim/vimfiles
 " set runtimepath+=/usr/share/vim/addons,/usr/share/vim/vim61
 " set runtimepath+=/usr/share/vim/vimfiles/after,~/.vim/after
 
 " convert tabs to spaces. indent level is 2
-" filetype plugin indent on
 set ts=2
 set sw=2
 set et
@@ -103,7 +104,7 @@ set showfulltag               " show full completion tags
 
 "set ttyfast
 
-set dictionary=/usr/share/dict/words
+"set dictionary=/usr/share/dict/words
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -111,12 +112,6 @@ else
   set backup		" keep a backup file
   set backupdir=~/.vim/backup
 endif
-
-"if $TERM =~ '^xterm'
-"        set t_Co=256 
-"elseif $TERM =~ '^xterm-color'
-"        set t_Co=256 
-"endif
  
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
@@ -157,6 +152,10 @@ map <leader>r :!ruby %<CR>
 noremap  :bn<CR>
 noremap  :bp<CR>
 
+nnoremap <F5> :set invpaste paste?<CR>
+"imap <F5> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F5>
+set showmode
 
 "netrw stuff
 " http://mysite.verizon.net/astronaut/vim/index.html#NETRW
@@ -183,10 +182,6 @@ else
 endif
 
 source ~/.vim/vim7.vim
-
-" vim trac plugin
-let g:tracServerList = {}       
-source ~/.vim/tracserverlist
 
 " ---------------------------------------------------------------------------
 " tabs
@@ -261,7 +256,6 @@ compiler ruby
 
 set laststatus=2
 
-
 if has('statusline')
         " Status line detail: (from Rafael Garcia-Suarez)
         " %f		file path
@@ -329,8 +323,8 @@ if has('statusline')
         "highlight StatusLineNC  ctermfg=White ctermbg=DarkBlue cterm=NONE
 endif
 
- "For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
- "let &guioptions = substitute(&guioptions, "t", "", "g")
+" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
+" let &guioptions = substitute(&guioptions, "t", "", "g")
 
 
 " This is an alternative that also works in block mode, but the deleted
@@ -374,21 +368,21 @@ else
 endif " has("autocmd")
 
 " Don't write backup file for some files
-au BufWrite /private/tmp/crontab.* set nowritebackup
-au BufWrite /private/tmp/crontab.* set nobackup
-au BufWrite /tmp/crontab.* set nowritebackup
-au BufWrite /tmp/crontab.* set nobackup
-au BufWrite /dev/shm/taylortmp/* set nowritebackup
-au BufWrite /dev/shm/taylortmp/* set nobackup
+"au BufWrite /private/tmp/crontab.* set nowritebackup
+"au BufWrite /private/tmp/crontab.* set nobackup
+"au BufWrite /tmp/crontab.* set nowritebackup
+"au BufWrite /tmp/crontab.* set nobackup
+"au BufWrite /dev/shm/taylortmp/* set nowritebackup
+"au BufWrite /dev/shm/taylortmp/* set nobackup
 
 " We don't want a swap file and backup for these "private" files
-autocmd BufReadPre,FileReadPre ~/.mutt/private/* set viminfo=
-autocmd BufReadPre,FileReadPre ~/.mutt/private/* set noswapfile
-autocmd BufReadPre,FileReadPre ~/.mutt/private/* set nowritebackup
+"autocmd BufReadPre,FileReadPre ~/.mutt/private/* set viminfo=
+"autocmd BufReadPre,FileReadPre ~/.mutt/private/* set noswapfile
+"autocmd BufReadPre,FileReadPre ~/.mutt/private/* set nowritebackup
 
-autocmd BufReadPre,FileReadPre,BufWrite ~/.vim/tracserverlist set noswapfile
-autocmd BufReadPre,FileReadPre,BufWrite ~/.vim/tracserverlist set nobackup
-autocmd BufReadPre,FileReadPre,BufWrite ~/.vim/tracserverlist set nowritebackup
+"autocmd BufReadPre,FileReadPre,BufWrite ~/.vim/tracserverlist set noswapfile
+"autocmd BufReadPre,FileReadPre,BufWrite ~/.vim/tracserverlist set nobackup
+"autocmd BufReadPre,FileReadPre,BufWrite ~/.vim/tracserverlist set nowritebackup
 
 " au BufWrite /Users/taylor/sw/etc/pass set nowritebackup
 " au BufWrite /Users/taylor/sw/etc/pass set nobackup
