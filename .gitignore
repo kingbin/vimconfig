@@ -3,4 +3,5 @@ backup/*
 .netrwhist
 .VimballRecord
 .*swp
-tracserverlist 
+tracserverlist
+bundle/ 
