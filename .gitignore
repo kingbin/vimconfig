@@ -4,5 +4,4 @@ backup/*
 custom/*
 cache
 *.swp
-bundle/*
 .netrwhist
