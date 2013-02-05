@@ -136,7 +136,6 @@ else
 endif
 
 source ~/.vim/vim7.vim
-
 " ---------------------------------------------------------------------------
 " tabs
 " (LocalLeader is ",")
@@ -458,3 +457,7 @@ augroup bencrypted
   " after the file has been written.
   autocmd BufWritePost,FileWritePost *.gpg u
 augroup END
+
+source ~/.vim/custom/settings.vim
+
+
