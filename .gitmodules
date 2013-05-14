@@ -1,0 +1,3 @@
+[submodule "bundle/Git-Branch-Info"]
+	path = bundle/Git-Branch-Info
+	url = git://github.com/vim-scripts/Git-Branch-Info.git
