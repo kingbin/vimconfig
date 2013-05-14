@@ -5,4 +5,5 @@ custom/*
 cache
 *.swp
 .netrwhist
-bundle/*
+#bundle/*
+ignore/*

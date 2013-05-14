@@ -45,6 +45,8 @@ map <silent> <m-n> :cn <cr>
 " set runtimepath+=/usr/share/vim/addons,/usr/share/vim/vim61
 " set runtimepath+=/usr/share/vim/vimfiles/after,~/.vim/after
 
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " convert tabs to spaces. indent level is 2
 set ts=2
 set sw=2
@@ -66,7 +68,7 @@ else
   set backup		" keep a backup file
   set backupdir=~/.vim/backup
 endif
- 
+
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   set hlsearch
@@ -76,10 +78,10 @@ endif
 "     colorscheme default
 if has("gui_running")
   set cursorline
-  set background=dark 
+  set background=dark
   " ir_black looks great in macvim.  very close to textmate ir_black
   " if has("mac") could be used
-  colorscheme ir_black 
+  colorscheme ir_black
   "set noantialias
   set guioptions-=T        " no toolbar
   "colorscheme macvim      " macvim == win
@@ -113,7 +115,7 @@ set showmode
 
 "netrw stuff
 " http://mysite.verizon.net/astronaut/vim/index.html#NETRW
-" 
+"
 let g:netrw_altv          = 1
 let g:netrw_fastbrowse    = 2
 let g:netrw_keepdir       = 0
@@ -135,12 +137,13 @@ else
   map <LocalLeader>e :e <C-R>=expand("%:p:h") . "\\" <CR>
 endif
 
-source ~/.vim/vim7.vim
+"source ~/.vim/vim7.vim
+
 " ---------------------------------------------------------------------------
 " tabs
 " (LocalLeader is ",")
-map <LocalLeader>tc :tabnew<cr>    " create a new tab       
-map <LocalLeader>tC :tabnew %<cr>    " create a new tab       
+map <LocalLeader>tc :tabnew<cr>    " create a new tab
+map <LocalLeader>tC :tabnew %<cr>    " create a new tab
 "map <LocalLeader>td :tabclose<cr>    " close a tab
 map <LocalLeader>tq :tabclose<cr>    " close a tab
 map <LocalLeader>tn :tabnext<cr>     " next tab
@@ -151,15 +154,6 @@ map <LocalLeader>tm :tabmove         " move a tab to a new location
 if has('mouse')
   set mouse=a
 endif
-
-" ---------------------------------------------------------------------------
-" Highlight end of line space red
-"highlight ExtraWhitespace ctermbg=red guibg=red
-"match ExtraWhitespace /\s\+$/
-"autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-"autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-"autocmd BufWinLeave * call clearmatches()
 
 
 " fuzzy finder textmate
@@ -179,7 +173,7 @@ end
 
 " BufExplorer
 map <LocalLeader>bb :BufExplorer<CR>
- 
+
 " ---------------------------------------------------------------------------
 "  configuration for fuzzyfinder
 " find in buffer is ,fb
@@ -257,7 +251,7 @@ if has('statusline')
           let g:git_branch_status_head_current=1
           let g:git_branch_status_ignore_remotes=1
           let g:git_branch_status_text=""
-        
+
           function! SetStatusLineStyle()
                   let &stl="%f %y "                       .
                           \"%([%R%M]%)"                   .
@@ -369,7 +363,7 @@ autocmd BufReadPre,FileReadPre,BufWrite *credentials*,*authinfo*,.authinfo*,*pas
 autocmd BufReadPre,FileReadPre,BufWrite *credentials*,*authinfo*,.authinfo*,*pass,pass,pass.* set nowritebackup
 
 " set up syntax highlighting for my e-mail
-au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt*,sup.* :set ft=mail 
+au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt*,sup.* :set ft=mail
 
 
 " augroup encrypted
@@ -378,20 +372,20 @@ au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt
 " autocmd BufReadPre,FileReadPre *.gpg,*.asc set noswapfile
 " autocmd BufReadPre,FileReadPre *.gpg set bin
 " autocmd BufReadPre,FileReadPre *.gpg,*.asc let ch_save = &ch|set ch=2
-" 
+"
 " autocmd BufReadPost,FileReadPost *.gpg,*.asc '[,']!sh -c 'gpg --decrypt 2> /dev/null'
 " autocmd BufReadPost,FileReadPost *.gpg set nobin
 " autocmd BufReadPost,FileReadPost *.gpg,*.asc let &ch = ch_save|unlet ch_save
 " autocmd BufReadPost,FileReadPost *.gpg,*.asc execute ":doautocmd BufReadPost " . expand("%:r")
-" 
+"
 " " autocmd BufWritePre,FileWritePre pass.gpg '[,']!sh -c 'gpg
 " " - --default-recipient-self -r chris@hippiehacker.org -e 2>/dev/null'
 " " autocmd BufWritePre,FileWritePre pass.asc '[,']!sh -c 'gpg
 " " - --default-recipient-self -r chris@hippiehacker.org -e -a 2>/dev/null'
-" 
+"
 " autocmd BufWritePre,FileWritePre *.gpg '[,']!sh -c 'gpg - --default-recipient-self -e 2>/dev/null'
 " autocmd BufWritePre,FileWritePre *.asc '[,']!sh -c 'gpg - --default-recipient-self -ae 2>/dev/null'
-" 
+"
 " autocmd BufWritePost,FileWritePost *.gpg,*.asc u
 " augroup END
 

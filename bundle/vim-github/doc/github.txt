@@ -1,0 +1,134 @@
+*github.txt*	An interface for Github.
+
+Version: 0.1.0
+Author : thinca <thinca+vim@gmail.com>
+License: Creative Commons Attribution 2.1 Japan License
+         <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
+
+==============================================================================
+CONTENTS					*github-contents*
+
+INTRODUCTION			|github-introduction|
+INTERFACE			|github-interface|
+  COMMANDS			  |github-commands|
+  FUNCTIONS			  |github-functions|
+CUSTOMIZING			|github-customizing|
+CHANGELOG			|github-changelog|
+
+
+==============================================================================
+INTRODUCTION					*github-introduction*
+
+*github* is a Vim plugin to access to Github.
+
+Requirements:
+- Vim 7.2 or later
+- curl
+- git
+
+Latest version:
+http://github.com/thinca/vim-github
+
+
+
+==============================================================================
+INTERFACE					*github-interface*
+
+------------------------------------------------------------------------------
+COMMANDS					*github-commands*
+
+:Github {feature} [arguments]			*:Github*
+
+
+------------------------------------------------------------------------------
+FUNCTIONS					*github-functions*
+
+github#connect({path} [, {param}] [, {raw}])	*github#connect()*
+			Connect to the github.
+
+
+
+==============================================================================
+FEATURES					*github-features*
+
+
+
+------------------------------------------------------------------------------
+ISSUES						*github-feature-issues*
+
+Arguments
+---------
+Arguments for the |:Github| command.
+
+issues {repos}
+			Open the issue list.
+
+issues {repos} {id}
+			Open the issue.
+
+issues {repos} new
+			Open the buffer to open a new issue.
+
+{repos} is just a own repository name or the form like "{user}/{repos}".
+
+
+
+Editing an issue
+----------------
+The buffer to edit an issue is following format. >
+
+	[[POST]]
+	title: {title}
+	labels: {label1}, {label2}
+	body:
+	{body...}
+
+The first line is a button to post this issue.
+The line that starts with 'title:' is treated as title.
+The line that starts with 'labels:' is treated as label list.  This is
+omitable.
+Since the line that starts with 'body:' is treated as body.  The blank lines
+at the header of body are ignored.
+
+Limitation
+----------
+The following functions are not provided, because API doesn't exist.
+
+- Unread management.
+- Edit a comment.
+- Delete a comment.
+- Get the color of a label.
+- Set the color of a label.
+- Rename a label.
+- Update vote.
+
+
+
+==============================================================================
+CUSTOMIZING					*github-customizing*
+
+g:github#user					*g:github#user*
+			User name in github.  If omitted, initialized with
+			following command. >
+			git config --global github.user
+
+g:github#token					*g:github#token*
+			API token in github.  If omitted, initialized with
+			following command. >
+			git config --global github.token
+
+g:github#curl_cmd				*g:github#curl_cmd*
+			curl command.
+			The default value is "curl".
+
+
+
+==============================================================================
+CHANGELOG					*github-changelog*
+
+0.1.0	xxxx-xx-xx
+	- Initial version.
+
+
+==============================================================================
+vim:tw=78:fo=tcq2mM:ts=8:ft=help:norl
