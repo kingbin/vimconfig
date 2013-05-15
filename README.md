@@ -4,9 +4,9 @@ I put all of this in $HOME/.vim.  I then make a link from $HOME/.vim/vimrc to $H
 
 I'm using tpope's pathogen to handle plugins.
 You can update the bundles by
-  git submodule update --recursive
+    git submodule update --recursive
 Or if you haven't init a submodule
-  git submodule foreach --recursive git pull origin master
+    git submodule foreach --recursive git pull origin master
 
 TIPS:
   "*p to paste from system copy buffer
