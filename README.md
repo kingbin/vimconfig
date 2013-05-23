@@ -23,4 +23,4 @@ TIPS:
   gg=G - Indent the whole file
 
   <F5> - Toggle paste mode
-  
+

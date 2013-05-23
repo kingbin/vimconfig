@@ -91,8 +91,9 @@ if has("gui_running")
   set columns=140
   "set gfn=Monaco:h9
 else
-  "colorscheme desert256
-  colorscheme desert
+  "colorscheme jellybeans
+  "colorscheme liquidcarbon
+  colorscheme twilight
 end
 
 " If I forgot to sudo vim a file, do that with :w!!
