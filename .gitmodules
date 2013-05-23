@@ -25,9 +25,6 @@
 [submodule "bundle/vim-buffer-explorer-plugin"]
 	path = bundle/vim-buffer-explorer-plugin
 	url = https://github.com/widox/vim-buffer-explorer-plugin.git
-[submodule "bundle/vim-bundler"]
-	path = bundle/vim-bundler
-	url = git://github.com/tpope/vim-bundler.git
 [submodule "bundle/vim-characterize"]
 	path = bundle/vim-characterize
 	url = git://github.com/tpope/vim-characterize.git
