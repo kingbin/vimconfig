@@ -1,0 +1,1 @@
+CamelCaseComplete.vba: call delete('/home/cblazek/.vim/bundle/vim-camelCase/autoload/CamelCaseComplete.vim')|call delete('/home/cblazek/.vim/bundle/vim-camelCase/plugin/CamelCaseComplete.vim')|call delete('/home/cblazek/.vim/bundle/vim-camelCase/doc/CamelCaseComplete.txt')
