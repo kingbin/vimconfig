@@ -1556,5 +1556,5 @@ ALIGNMENT MAP HISTORY					*alignmap-history* {{{2
 	                   :   various bugfixes to \afnc, \T=, etc
 
 ==============================================================================
-Modelines: {{{1
+odelines: {{{1
 vim:tw=78:ts=8:ft=help:fdm=marker:

@@ -181,6 +181,6 @@ Started development.
 Copyright: (C) 2009-2012 Ingo Karkat
 The VIM LICENSE applies to this script; see |copyright|. 
 
-Maintainer:	Ingo Karkat <ingo@karkat.de>
+aintainer:	Ingo Karkat <ingo@karkat.de>
 ==============================================================================
  vim:tw=78:ts=8:ft=help:norl:

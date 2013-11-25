@@ -1713,7 +1713,7 @@ Related Topics:
 	|netrw-u|  change to a predecessor directory via the history stack
 	|netrw-U|  change to a successor   directory via the history stack
 
-MAKING A NEW DIRECTORY					*netrw-d* {{{2
+AKING A NEW DIRECTORY					*netrw-d* {{{2
 
 With the "d" map one may make a new directory either remotely (which depends
 on the global variable g:netrw_mkdir_cmd) or locally (which depends on the
@@ -1727,7 +1727,7 @@ Currently, making a directory via ftp is not supported.
 Associated setting variable: |g:netrw_local_mkdir| |g:netrw_mkdir_cmd|
 
 
-MAKING THE BROWSING DIRECTORY THE CURRENT DIRECTORY	*netrw-c* {{{2
+AKING THE BROWSING DIRECTORY THE CURRENT DIRECTORY	*netrw-c* {{{2
 
 By default, |g:netrw_keepdir| is 1.  This setting means that the current
 directory will not track the browsing directory.
@@ -1743,7 +1743,7 @@ directory.
 
 Associated setting variable: |g:netrw_keepdir|
 
-MARKING FILES							*netrw-mf* {{{2
+ARKING FILES							*netrw-mf* {{{2
 	(also see |netrw-mr|)
 
 One may mark files with the cursor atop a filename and then pressing "mf".
@@ -1770,7 +1770,7 @@ the cursor atop a marked file and press "mf".  This process also works
 with <s-leftmouse> using gvim.  One may unmark all files by pressing
 "mu" (see |netrw-mu|).
 
-Marked files are highlighted using the "netrwMarkFile" highlighting group,
+arked files are highlighted using the "netrwMarkFile" highlighting group,
 which by default is linked to "Identifier" (see Identifier under
 |group-name|).  You may change the highlighting group by putting something
 like >
@@ -1789,7 +1789,7 @@ commands which operate on marked files use one or the other of the marked file
 lists.
 
 
-MARKING FILES BY REGULAR EXPRESSION				*netrw-mr* {{{2
+ARKING FILES BY REGULAR EXPRESSION				*netrw-mr* {{{2
 	(also see |netrw-mf|)
 
 One may also mark files by pressing "mr"; netrw will then issue a prompt,
@@ -1800,7 +1800,7 @@ future I may make it possible to use |regexp|s instead of glob()-style
 expressions (yet-another-option).
 
 
-MARKED FILES: ARBITRARY COMMAND				*netrw-mx* {{{2
+ARKED FILES: ARBITRARY COMMAND				*netrw-mx* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the local marked-file list)
 
@@ -1810,7 +1810,7 @@ substituted with the name of each marked file in turn.  If no "%"s are in the
 command, then the command will be followed by a space and a marked filename.
 
 
-MARKED FILES: COMPRESSION AND DECOMPRESSION		*netrw-mz* {{{2
+ARKED FILES: COMPRESSION AND DECOMPRESSION		*netrw-mz* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the local marked file list)
 
@@ -1824,7 +1824,7 @@ associated decompressing utilities; see |g:netrw_decompress|.
 
 Associated setting variables: |g:netrw_compress| |g:netrw_decompress|
 
-MARKED FILES: COPYING						*netrw-mc* {{{2
+ARKED FILES: COPYING						*netrw-mc* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (Uses the global marked file list)
 
@@ -1834,21 +1834,21 @@ from the current window (where one does the mf) to the target.
 
 Associated setting variable: |g:netrw_localcopycmd| |g:netrw_ssh_cmd|
 
-MARKED FILES: DIFF						*netrw-md* {{{2
+ARKED FILES: DIFF						*netrw-md* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the global marked file list)
 
 Use |vimdiff| to visualize difference between selected files (two or
 three may be selected for this).  Uses the global marked file list.
 
-MARKED FILES: EDITING						*netrw-me* {{{2
+ARKED FILES: EDITING						*netrw-me* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the global marked file list)
 
 This command will place the marked files on the |arglist| and commence
 editing them.  One may return the to explorer window with |:Rexplore|.
 
-MARKED FILES: GREP						*netrw-mg* {{{2
+ARKED FILES: GREP						*netrw-mg* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the global marked file list)
 
@@ -1858,7 +1858,7 @@ for the requested pattern; one may enter: >
 	! /pattern/[g][j]
 	pattern
 <
-MARKED FILES: HIDING AND UNHIDING BY SUFFIX			*netrw-mh* {{{2
+ARKED FILES: HIDING AND UNHIDING BY SUFFIX			*netrw-mh* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the local marked file list)
 
@@ -1870,7 +1870,7 @@ is the same as not having bothered to select them at all).
 
 Related topics: |netrw-a| |g:netrw_list_hide|
 
-MARKED FILES: MOVING						*netrw-mm* {{{2
+ARKED FILES: MOVING						*netrw-mm* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the global marked file list)
 
@@ -1887,7 +1887,7 @@ from the current window (where one does the mf) to the target.
 
 Associated setting variable: |g:netrw_localmovecmd| |g:netrw_ssh_cmd|
 
-MARKED FILES: PRINTING						*netrw-mp* {{{2
+ARKED FILES: PRINTING						*netrw-mp* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the local marked file list)
 
@@ -1896,14 +1896,14 @@ is open each file in a one-line window, execute hardcopy, then close the
 one-line window.
 
 
-MARKED FILES: SOURCING						*netrw-ms* {{{2
+ARKED FILES: SOURCING						*netrw-ms* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the local marked file list)
 
 Netrw will source the marked files (using vim's |:source| command)
 
 
-MARKED FILES: TAGGING						*netrw-mT* {{{2
+ARKED FILES: TAGGING						*netrw-mT* {{{2
 	    (See |netrw-mf| and |netrw-mr| for how to mark files)
 		      (uses the global marked file list)
 
@@ -1929,7 +1929,7 @@ edit the desired file and go to the tag.
 Associated setting variables: |g:netrw_ctags| |g:netrw_ssh_cmd|
 
 
-MARKED FILES: SETTING THE TARGET DIRECTORY			*netrw-mt* {{{2
+ARKED FILES: SETTING THE TARGET DIRECTORY			*netrw-mt* {{{2
      (See |netrw-mf| and |netrw-mr| for how to mark files)
 
 Set the marked file copy/move-to target (see |netrw-mc| and |netrw-mm|):
@@ -1947,7 +1947,7 @@ There is only one copy/move-to target per vim session; ie. the target is a
 script variable (see |s:var|) and is shared between all netrw windows (in an
 instance of vim).
 
-MARKED FILES: UNMARKING						*netrw-mu* {{{2
+ARKED FILES: UNMARKING						*netrw-mu* {{{2
      (See |netrw-mf| and |netrw-mr| for how to mark files)
 
 The "mu" mapping will unmark all currently marked files.
@@ -3605,5 +3605,5 @@ which is loaded automatically at startup (assuming :set nocp).
 	                           operation
 
 ==============================================================================
-Modelines: {{{1
+odelines: {{{1
  vim:tw=78:ts=8:ft=help:norl:fdm=marker

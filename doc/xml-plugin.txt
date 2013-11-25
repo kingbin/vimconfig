@@ -44,7 +44,7 @@ Known Bugs      ~
 
 ------------------------------------------------------------------------------
                                                          *xml-plugin-mappings*
-Mappings      ~
+appings      ~
 
 <LocalLeader> is a setting in VIM that depicts a prefix for scripts and
 plugins to use. By default this is the backslash key `\'. See |mapleader|
