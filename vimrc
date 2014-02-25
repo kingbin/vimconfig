@@ -16,7 +16,9 @@ set modelines=0               " no modelines [http://www.guninski.com/vim1.html]
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
 
-call pathogen#infect()
+"call pathogen#infect()
+execute pathogen#infect()
+
 "call pathogen#runtime_append_all_bundles()
 silent! call pathogen#infect("~/.vim/depot")
 

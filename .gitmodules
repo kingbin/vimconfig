@@ -82,9 +82,12 @@
 [submodule "bundle/vim-json"]
   path = bundle/vim-json
   url = https://github.com/elzr/vim-json.git
-[submodule "bundle/tslime.vim"]
-  path = bundle/tslime.vim
-  url = https://github.com/jgdavey/tslime.vim.git
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
 	url = git@github.com:tpope/vim-pathogen.git
+[submodule "minibufexpl.vim"]
+	path = minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "tslime.vim"]
+	path = tslime.vim
+	url = https://github.com/kikijump/tslime.vim.git
