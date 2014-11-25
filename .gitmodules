@@ -122,3 +122,6 @@
   path = bundle/vim-tcomment
   url = git@github.com:tomtom/tcomment_vim.git
   ignore = dirty
+[submodule "dart-vim-plugin"]
+	path = dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin.git
