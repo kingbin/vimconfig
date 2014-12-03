@@ -122,6 +122,12 @@
   path = bundle/vim-tcomment
   url = git@github.com:tomtom/tcomment_vim.git
   ignore = dirty
-[submodule "dart-vim-plugin"]
-	path = dart-vim-plugin
+[submodule "bundle/vim-webdevicons"]
+	path = bundle/vim-webdevicons
+	url = https://github.com/ryanoasis/vim-webdevicons.git
+[submodule "bundle/dart-vim-plugin"]
+	path = bundle/dart-vim-plugin
 	url = https://github.com/dart-lang/dart-vim-plugin.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
