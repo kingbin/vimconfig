@@ -73,9 +73,9 @@ if has("vms")
   set nobackup    " do not keep a backup file, use versions instead
 else
   set backup    " keep a backup file
-  "  set backupdir=~/.vim/backup
-  set backupdir=./.backup,.,~/.vim/backup
-  set directory=.,./.backup,~/.vim/backup
+  set backupdir=~/.vim/backup
+  "set backupdir=./.backup,.,~/.vim/backup
+  "set directory=.,./.backup,~/.vim/backup
 endif
 
 " Also switch on highlighting the last used search pattern.
