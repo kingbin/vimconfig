@@ -22,10 +22,6 @@
   path = bundle/snipmate.vim
   url = git://github.com/msanders/snipmate.vim.git
   ignore = dirty
-[submodule "bundle/vim-blazek"]
-  path = bundle/vim-blazek
-  url = https://github.com/kingbin/vim-blazek.git
-  ignore = dirty
 [submodule "bundle/vim-buffer-explorer-plugin"]
   path = bundle/vim-buffer-explorer-plugin
   url = https://github.com/widox/vim-buffer-explorer-plugin.git
@@ -132,3 +128,6 @@
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = git@github.com:mbbill/undotree.git
+[submodule "bundle/vim-blazek"]
+	path = bundle/vim-blazek
+	url = git@github.com:kingbin/vim-blazek.git
