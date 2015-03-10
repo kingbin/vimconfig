@@ -21,11 +21,10 @@ set modelines=0               " no modelines [http://www.guninski.com/vim1.html]
 let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
 
-"call pathogen#infect()
 execute pathogen#infect()
 
 "call pathogen#runtime_append_all_bundles()
-silent! call pathogen#infect("~/.vim/depot")
+"silent! call pathogen#infect("~/.vim/depot")
 
 set nocompatible
 syntax on
@@ -229,72 +228,72 @@ compiler ruby
 
 set laststatus=2
 
-if has('statusline')
-        " Status line detail: (from Rafael Garcia-Suarez)
-        " %f    file path
-        " %y    file type between braces (if defined)
-        " %([%R%M]%)  read-only, modified and modifiable flags between braces
-        " %{'!'[&ff=='default_file_format']}
-        "     shows a '!' if the file format is not the platform
-        "     default
-        " %{'$'[!&list]}  shows a '*' if in list mode
-        " %{'~'[&pm=='']} shows a '~' if in patchmode
-        " (%{synIDattr(synID(line('.'),col('.'),0),'name')})
-        "     only for debug : display the current syntax item name
-        " %=    right-align following items
-        " #%n   buffer number
-        " %l/%L,%c%V  line number, total number of lines, and column number
-        "function! SetStatusLineStyle()
-        "        if &stl == '' || &stl =~ 'synID'
-        "                let &stl="%f %y%([%R%M]%)%{'!'[&ff=='".&ff."']}%{'$'[!&list]}" .
-        "                                        \"%{'~'[&pm=='']}"                     .
-        "                                        \"%=#%n %l/%L,%c%V "                   .
-        "                                        \"git:%{call GitBranch()}"
-        "        else
-        "                let &stl="%f %y%([%R%M]%)%{'!'[&ff=='".&ff."']}%{'$'[!&list]}" .
-        "                                        \" (%{synIDattr(synID(line('.'),col('.'),0),'name')})" .
-        "                                        \"%=#%n %l/%L,%c%V "
-        "        endif
-        "endfunc
-        "call SetStatusLineStyle()
-
-        if has("ruby")
-          let g:git_branch_status_head_current=1
-          let g:git_branch_status_ignore_remotes=1
-          let g:git_branch_status_text=""
-
-          function! SetStatusLineStyle()
-                  let &stl="%f %y "                       .
-                          \"%([%R%M]%)"                   .
-                          \"%#StatusLineNC#%{&ff=='unix'?'':&ff.'\ format'}%*" .
-                          \"%{'$'[!&list]}"               .
-                          \"%{'~'[&pm=='']}"              .
-                          \"%="                           .
-                          \"#%n %l/%L,%c%V "              .
-                          \"git:%{GitBranchInfoString()} "
-                          "\"%{rvm#statusline()} " .
-  "      \"%#StatusLineNC#%{GitBranchInfoString()}%* " .
-          endfunc
-        else
-          function! SetStatusLineStyle()
-                  let &stl="%f %y "                       .
-                          \"%([%R%M]%)"                   .
-                          \"%#StatusLineNC#%{&ff=='unix'?'':&ff.'\ format'}%*" .
-                          \"%{'$'[!&list]}"               .
-                          \"%{'~'[&pm=='']}"              .
-                          \"%="                           .
-                          \"#%n %l/%L,%c%V "
-          endfunc
-        end
-        call SetStatusLineStyle()
-
-        if has('title')
-                set titlestring=%t%(\ [%R%M]%)
-        endif
-
-        "highlight StatusLine    ctermfg=White ctermbg=DarkBlue cterm=bold
-        "highlight StatusLineNC  ctermfg=White ctermbg=DarkBlue cterm=NONE
-endif
+"if has('statusline')
+"        " Status line detail: (from Rafael Garcia-Suarez)
+"        " %f    file path
+"        " %y    file type between braces (if defined)
+"        " %([%R%M]%)  read-only, modified and modifiable flags between braces
+"        " %{'!'[&ff=='default_file_format']}
+"        "     shows a '!' if the file format is not the platform
+"        "     default
+"        " %{'$'[!&list]}  shows a '*' if in list mode
+"        " %{'~'[&pm=='']} shows a '~' if in patchmode
+"        " (%{synIDattr(synID(line('.'),col('.'),0),'name')})
+"        "     only for debug : display the current syntax item name
+"        " %=    right-align following items
+"        " #%n   buffer number
+"        " %l/%L,%c%V  line number, total number of lines, and column number
+"        "function! SetStatusLineStyle()
+"        "        if &stl == '' || &stl =~ 'synID'
+"        "                let &stl="%f %y%([%R%M]%)%{'!'[&ff=='".&ff."']}%{'$'[!&list]}" .
+"        "                                        \"%{'~'[&pm=='']}"                     .
+"        "                                        \"%=#%n %l/%L,%c%V "                   .
+"        "                                        \"git:%{call GitBranch()}"
+"        "        else
+"        "                let &stl="%f %y%([%R%M]%)%{'!'[&ff=='".&ff."']}%{'$'[!&list]}" .
+"        "                                        \" (%{synIDattr(synID(line('.'),col('.'),0),'name')})" .
+"        "                                        \"%=#%n %l/%L,%c%V "
+"        "        endif
+"        "endfunc
+"        "call SetStatusLineStyle()
+"
+"        if has("ruby")
+"          let g:git_branch_status_head_current=1
+"          let g:git_branch_status_ignore_remotes=1
+"          let g:git_branch_status_text=""
+"
+"          function! SetStatusLineStyle()
+"                  let &stl="%f %y "                       .
+"                          \"%([%R%M]%)"                   .
+"                          \"%#StatusLineNC#%{&ff=='unix'?'':&ff.'\ format'}%*" .
+"                          \"%{'$'[!&list]}"               .
+"                          \"%{'~'[&pm=='']}"              .
+"                          \"%="                           .
+"                          \"#%n %l/%L,%c%V "              .
+"                          \"git:%{GitBranchInfoString()} "
+"                          "\"%{rvm#statusline()} " .
+"  "      \"%#StatusLineNC#%{GitBranchInfoString()}%* " .
+"          endfunc
+"        else
+"          function! SetStatusLineStyle()
+"                  let &stl="%f %y "                       .
+"                          \"%([%R%M]%)"                   .
+"                          \"%#StatusLineNC#%{&ff=='unix'?'':&ff.'\ format'}%*" .
+"                          \"%{'$'[!&list]}"               .
+"                          \"%{'~'[&pm=='']}"              .
+"                          \"%="                           .
+"                          \"#%n %l/%L,%c%V "
+"          endfunc
+"        end
+"        call SetStatusLineStyle()
+"
+"        if has('title')
+"                set titlestring=%t%(\ [%R%M]%)
+"        endif
+"
+"        "highlight StatusLine    ctermfg=White ctermbg=DarkBlue cterm=bold
+"        "highlight StatusLineNC  ctermfg=White ctermbg=DarkBlue cterm=NONE
+"endif
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")

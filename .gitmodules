@@ -10,10 +10,6 @@
   path = bundle/gist-vim
   url = https://github.com/mattn/gist-vim.git
   ignore = dirty
-[submodule "bundle/git-vim"]
-  path = bundle/git-vim
-  url = git://github.com/motemen/git-vim.git
-  ignore = dirty
 [submodule "bundle/grunt.vim"]
   path = bundle/grunt.vim
   url = git://github.com/mklabs/grunt.vim.git
@@ -86,10 +82,6 @@
   path = bundle/powerline
   url = git://github.com/Lokaltog/vim-powerline.git
   ignore = dirty
-[submodule "bundle/vim-statline"]
-  path = bundle/vim-statline
-  url = git://github.com/millermedeiros/vim-statline.git
-  ignore = dirty
 [submodule "bundle/syntastic"]
   path = bundle/syntastic
   url = git://github.com/scrooloose/syntastic.git
@@ -131,3 +123,12 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
+[submodule "bundle/vim-javascript-syntax"]
+	path = bundle/vim-javascript-syntax
+	url = git@github.com:jelera/vim-javascript-syntax.git
+[submodule "bundle/javascript-libraries-syntax.vim"]
+	path = bundle/javascript-libraries-syntax.vim
+	url = git@github.com:othree/javascript-libraries-syntax.vim.git
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = git@github.com:mbbill/undotree.git
