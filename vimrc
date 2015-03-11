@@ -42,6 +42,19 @@ set title
 
 set viminfo^=!
 
+" support separate .vimrc for different projects
+set exrc
+
+au BufWritePost .vimrc so $MYVIMRC
+
+let mapleader = " "
+
+" tap leader twice and bring back to the last buffer I was on
+nnoremap <leader><leader> :b#<cr>
+
+" load .vimrc file quickly
+nnoremap <leader>V :e $MYVIMRC<cr>
+
 " alt+n or alt+p to navigate between entries in QuickFix
 map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
