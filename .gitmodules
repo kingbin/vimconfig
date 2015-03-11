@@ -131,3 +131,6 @@
 [submodule "bundle/vim-blazek"]
 	path = bundle/vim-blazek
 	url = git@github.com:kingbin/vim-blazek.git
+[submodule "bundle/base16-vim"]
+	path = bundle/base16-vim
+	url = git@github.com:chriskempson/base16-vim.git

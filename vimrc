@@ -102,7 +102,10 @@ else
   "colorscheme jellybeans
   "colorscheme liquidcarbon
   "colorscheme twilight
-colorscheme vividchalk
+  set background=dark
+"  colorscheme vividchalk
+  let base16colorspace=256  " Access colors present in 256 colorspace
+  colorscheme base16-tomorrow
 end
 
 " If I forgot to sudo vim a file, do that with :w!!
