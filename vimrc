@@ -47,7 +47,7 @@ set exrc
 
 au BufWritePost .vimrc so $MYVIMRC
 
-let mapleader = " "
+let mapleader = ","
 
 " tap leader twice and bring back to the last buffer I was on
 nnoremap <leader><leader> :b#<cr>
