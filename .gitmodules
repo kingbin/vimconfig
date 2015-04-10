@@ -134,3 +134,6 @@
 [submodule "bundle/base16-vim"]
 	path = bundle/base16-vim
 	url = git@github.com:chriskempson/base16-vim.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git@github.com:tpope/vim-fugitive.git
