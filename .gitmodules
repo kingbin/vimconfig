@@ -140,3 +140,9 @@
 [submodule "bundle/dash.vim"]
 	path = bundle/dash.vim
 	url = git@github.com:rizzatti/dash.vim.git
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = git@github.com:elixir-lang/vim-elixir.git
+[submodule "bundle/editorconfig-vim"]
+	path = bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
