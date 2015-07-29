@@ -18,10 +18,6 @@
   path = bundle/nerdtree
   url = https://github.com/scrooloose/nerdtree
   ignore = dirty
-[submodule "bundle/snipmate.vim"]
-  path = bundle/snipmate.vim
-  url = git://github.com/msanders/snipmate.vim.git
-  ignore = dirty
 [submodule "bundle/vim-buffer-explorer-plugin"]
   path = bundle/vim-buffer-explorer-plugin
   url = https://github.com/widox/vim-buffer-explorer-plugin.git
@@ -149,3 +145,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
