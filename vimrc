@@ -99,12 +99,13 @@ endif
 "     colorscheme default
 if has("gui_running")
   set cursorline
-  set background=dark
+  set background=light
   " ir_black looks great in macvim.  very close to textmate ir_black
   " if has("mac") could be used
-  colorscheme ir_black
   "set noantialias
   set guioptions-=T        " no toolbar
+  colorscheme pyte
+  "colorscheme ir_black
   "colorscheme macvim      " macvim == win
   map <MouseMiddle> <esc>"*p " paste with middle button
   set nu " it always looks fine in macvim
@@ -112,13 +113,14 @@ if has("gui_running")
   set columns=140
   "set gfn=Monaco:h9
 else
+  set background=light
+"  colorscheme vividchalk
+  let base16colorspace=256  " Access colors present in 256 colorspace
+  colorscheme Monokai
+  "colorscheme base16-tomorrow
   "colorscheme jellybeans
   "colorscheme liquidcarbon
   "colorscheme twilight
-  set background=dark
-"  colorscheme vividchalk
-  let base16colorspace=256  " Access colors present in 256 colorspace
-  colorscheme base16-tomorrow
 end
 
 " If I forgot to sudo vim a file, do that with :w!!
