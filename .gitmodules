@@ -151,3 +151,6 @@
 [submodule "bundle/completeme_you"]
 	path = bundle/completeme_you
 	url = git@github.com:valloric/youcompleteme.git
+[submodule "bundle/dash"]
+	path = bundle/dash
+	url = git@github.com:rizzatti/dash.vim.git
