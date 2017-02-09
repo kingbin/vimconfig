@@ -86,10 +86,6 @@
   path = bundle/vim-surround
   url = git://github.com/tpope/vim-surround.git
   ignore = dirty
-[submodule "bundle/kompressor"]
-  path = bundle/kompressor
-  url = https://github.com/antonshulgin/kompressor.vim.git
-  ignore = dirty
 [submodule "bundle/vim-json"]
   path = bundle/vim-json
   url = https://github.com/elzr/vim-json.git
