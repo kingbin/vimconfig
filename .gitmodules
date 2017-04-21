@@ -142,3 +142,6 @@
 [submodule "bundle/dash"]
 	path = bundle/dash
 	url = git@github.com:rizzatti/dash.vim.git
+[submodule "bundle/vim-ag"]
+	path = bundle/vim-ag
+	url = git@github.com:epmatsw/ag.vim.git
