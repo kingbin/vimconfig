@@ -54,10 +54,6 @@
   path = bundle/vim-pathogen
   url = git://github.com/tpope/vim-pathogen.git
   ignore = dirty
-[submodule "bundle/vim-ag"]
-  path = bundle/vim-ag
-  url = https://github.com/epmatsw/ag.vim.git
-  ignore = dirty
 [submodule "bundle/tabular"]
   path = bundle/tabular
   url = https://github.com/godlygeek/tabular.git
