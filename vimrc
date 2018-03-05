@@ -14,7 +14,10 @@
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 "set guifont=DroidSansMonoforPowerlinePlusNerdFileTypes
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Regular\ 11
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+set term=xterm-256color
+set encoding=utf-8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular
 
 " first the disabled features due to security concerns
 set modelines=0               " no modelines [http://www.guninski.com/vim1.html]
