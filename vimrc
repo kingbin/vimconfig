@@ -455,6 +455,8 @@ augroup bencrypted
   autocmd BufWritePost,FileWritePost *.gpg u
 augroup END
 
-source ~/.vim/custom/settings.vim
-
+"source ~/.vim/custom/settings.vim
+for f in split(glob('~/.vim/custom/*.vim'), '\n')
+    exe 'source' f
+endfor
 
