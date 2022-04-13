@@ -149,6 +149,15 @@
 [submodule "bundle/ycm"]
 	path = bundle/ycm
 	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "bundle/yats"]
+	path = bundle/yats
+	url = git@github.com:HerringtonDarkholme/yats.vim.git
+[submodule "bundle/vim-jsx-pretty"]
+	path = bundle/vim-jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "bundle/coc"]
+	path = bundle/coc
+	url = git@github.com:neoclide/coc.nvim.git
 [submodule "bundle/vim-prettier"]
 	path = bundle/vim-prettier
 	url = git@github.com:prettier/vim-prettier.git

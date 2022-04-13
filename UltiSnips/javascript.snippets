@@ -153,3 +153,37 @@ snippet memoizer "function that generate functions" b
     return shell;
   };
 endsnippet
+
+
+# React
+
+snippet tsrcc "Create a React Component with typescript." b
+import * as React from 'react'
+
+export interface I${1:App}Props {
+}
+
+export default class ${1:} extends React.Component<I${1:}Props> {
+  public render() {
+    return (
+      <div>
+        ${2:}
+      </div>
+    )
+  }
+}
+endsnippet
+
+snippet clu "console.log(`[PESTROUTES] $0: ${util.inspect($0, {colors:true, showHidden: true, depth: $1})}`)" b
+console.log(\`[PESTROUTES] $1: \${util.inspect($1, {colors:true, showHidden: true, depth: $2})}\`)
+$0
+endsnippet
+
+snippet u "import util" b
+import util from 'util'
+
+$0
+endsnippet
+
+
+

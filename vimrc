@@ -13,11 +13,12 @@
 
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 "set guifont=DroidSansMonoforPowerlinePlusNerdFileTypes
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Regular\ 11
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Regular\ 11
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 set term=xterm-256color
 set encoding=utf-8
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular
+set t_Co=256
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular
 
 " first the disabled features due to security concerns
 set modelines=0               " no modelines [http://www.guninski.com/vim1.html]
@@ -106,7 +107,7 @@ if has("gui_running")
   " ir_black looks great in macvim.  very close to textmate ir_black
   " if has("mac") could be used
   "set noantialias
-  set guioptions-=T        " no toolbar
+  "set guioptions-=T        " no toolbar
   colorscheme pyte
   "colorscheme ir_black
   "colorscheme macvim      " macvim == win
@@ -116,10 +117,11 @@ if has("gui_running")
   set columns=140
   "set gfn=Monaco:h9
 else
-  set background=light
+  set background=dark
 "  colorscheme vividchalk
   let base16colorspace=256  " Access colors present in 256 colorspace
-  colorscheme Monokai
+  colorscheme sonokai
+  "colorscheme Monokai
   "colorscheme base16-tomorrow
   "colorscheme jellybeans
   "colorscheme liquidcarbon
@@ -181,6 +183,8 @@ map <LocalLeader>tn :tabnext<cr>     " next tab
 map <LocalLeader>tp :tabprev<cr>     " previous tab
 map <LocalLeader>tm :tabmove         " move a tab to a new location
 
+:set list
+:set listchars=tab:>-     " > is shown at the beginning, - throughout
 
 if has('mouse')
   set mouse=a
@@ -460,3 +464,11 @@ for f in split(glob('~/.vim/custom/*.vim'), '\n')
     exe 'source' f
 endfor
 
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
