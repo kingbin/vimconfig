@@ -149,3 +149,6 @@
 [submodule "bundle/ycm"]
 	path = bundle/ycm
 	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "bundle/vim-prettier"]
+	path = bundle/vim-prettier
+	url = git@github.com:prettier/vim-prettier.git
