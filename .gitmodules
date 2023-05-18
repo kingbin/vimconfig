@@ -76,7 +76,7 @@
   ignore = dirty
 [submodule "bundle/syntastic"]
   path = bundle/syntastic
-  url = git@github.com/vim-syntastic/syntastic.git
+  url = git@github.com:vim-syntastic/syntastic.git
   ignore = dirty
 [submodule "bundle/vim-repeat"]
   path = bundle/vim-repeat
