@@ -1,9 +1,17 @@
 {
   "coc.preferences.extensionUpdateCheck": "daily",
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"],
 
+//  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact"],
 
-  "suggest.floatEnable":false,
+  "[typescript]": {
+    "coc.preferences.formatOnSave": true
+  },
+
+  "[typescriptreact]": {
+    "coc.preferences.formatOnSave": true
+  },
+
+//  "suggest.floatEnable":false,
   "signature.enable":false,
 
   "dialog.floatHighlight": "CocFloating",
@@ -16,20 +24,20 @@
   //  https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
   //  https://github.com/neoclide/coc.nvim/wiki/Using-configuration-file
 
-  // Enable preview (signatures, etc.) during completion
-  "suggest.enablePreview": false,
+//  // Enable preview (signatures, etc.) during completion
+//  "suggest.enablePreview": false,
 
   // Sort completion items alphabetically rather than by length
   "suggest.defaultSortMethod": "alphabetical",
 
-  // Maxmium width of floating preview window
-  "suggest.maxPreviewWidth": 80,
+//  // Maxmium width of floating preview window
+//  "suggest.maxPreviewWidth": 80,
 
   // Show signature below of the cursor rather than above
   "signature.preferShownAbove": false,
 
-  // Maxmium height of floating signature help window (defaults 8)
-  "signature.maxWindowHeight": 16,
+//  // Maxmium height of floating signature help window (defaults 8)
+//  "signature.maxWindowHeight": 16,
 
   // keymaps for coc-list
   "list.insertMappings": {
@@ -88,5 +96,6 @@
   "languageserver": {
     /* see [Optional language servers] section in ~/.vimrc  (dynamic LSP registration)
        References: https://github.com/neoclide/coc.nvim/wiki/Language-servers  */
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
