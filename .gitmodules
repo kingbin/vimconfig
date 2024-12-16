@@ -164,3 +164,6 @@
 [submodule "bundle/php-cs-fixer"]
 	path = bundle/php-cs-fixer
 	url = git@github.com:stephpy/vim-php-cs-fixer.git
+[submodule "bundle/gitcopilot"]
+	path = bundle/gitcopilot
+	url = git@github.com:github/copilot.vim.git
