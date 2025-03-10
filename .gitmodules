@@ -167,3 +167,9 @@
 [submodule "bundle/gitcopilot"]
 	path = bundle/gitcopilot
 	url = git@github.com:github/copilot.vim.git
+[submodule "bundle/omnisharp-vim"]
+	path = bundle/omnisharp-vim
+	url = git@github.com:OmniSharp/omnisharp-vim
+[submodule "bundle/sharpenup"]
+	path = bundle/sharpenup
+	url = git@github.com:nickspoons/vim-sharpenup
