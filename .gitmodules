@@ -173,3 +173,6 @@
 [submodule "bundle/sharpenup"]
 	path = bundle/sharpenup
 	url = git@github.com:nickspoons/vim-sharpenup
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = git@github.com:dense-analysis/ale
