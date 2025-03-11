@@ -6,4 +6,6 @@ cache
 *.swp
 .netrwhist
 #bundle/*
+bundle/keyfile
 ignore/*
+pack/*
